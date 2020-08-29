@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title%}
+      <title>Flask Blog -{{ title }}</title>
+    {% else%}
+      <title>Flask Blog</title>
+    {% endif %}
+   
+</head>
+<body>
+    {% for post in posts %}
+        <h1>{{post.title}}</h1>
+        <p>{{post.author}} - {{post.date_posted}}</p>
+        <p>{{post.content}}</p>
+    {% endfor %}
+    <!-- We have to sepcify where the for loop ends -->
+</body>
+</html>
